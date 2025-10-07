@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Kuenga Yangchen- Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <ul id="navbar">
+        <li><a href="#about" data-link>About</a></li>
+        <li><a href="#education" data-link>Education</a></li>
+        <li><a href="#skills" data-link>Skills</a></li>
+        <li><a href="#projects" data-link>Projects</a></li>
+        <li><a href="#contact" data-link>Contact</a></li>
+      </ul>
+      <button id="themeToggle" aria-label="Toggle dark mode" title="Night mode">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" data-section>
+    <img src="photo_6235610275873145823_y.jpg" alt="Profile Picture of Kuenga Yangchen">
+    <h1>Kuenga Yangchen</h1>
+    <h2 class="type"><span id="typingText">B.Ed IT Student</span><span class="caret">|</span></h2>
+    <p>Aspiring ICT Educator & Problem Solver</p>
+    <button class="cta" id="heroCta" data-confetti>Explore My Work</button>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" data-section>
+    <h2>About Me</h2>
+    <p>I am 20 years old, currently pursuing a Bachelor of Education in ICT at Samtse College of Education. As a third-year student, I have a deep interest in teaching and I am grateful to soon step into the role of an educator.</p>
+  </section>
+
+  <!-- Education -->
+  <section id="education" data-section>
+    <h2>Education</h2>
+    <div class="education-card" tabindex="0">
+      <h3>B.Ed in ICT, Samtse College of Education</h3>
+      <div class="edu-details" hidden>
+        <p>Focus: Educational Technology, Database Systems, Web Development.</p>
+        <p>Activities: Peer tutoring, project-based learning facilitation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-section>
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card">
+        <span>Database Design & Management</span>
+        <div class="progress"><div class="bar" data-progress="85"></div></div>
+      </div>
+      <div class="skill-card">
+        <span>Microsoft Office</span>
+        <div class="progress"><div class="bar" data-progress="90"></div></div>
+      </div>
+      <div class="skill-card">
+        <span>Adobe Photoshop</span>
+        <div class="progress"><div class="bar" data-progress="75"></div></div>
+      </div>
+      <div class="skill-card">
+        <span>Teamwork & Collaboration</span>
+        <div class="progress"><div class="bar" data-progress="88"></div></div>
+      </div>
+      <div class="skill-card">
+        <span>Communication</span>
+        <div class="progress"><div class="bar" data-progress="82"></div></div>
+      </div>
+      <div class="skill-card">
+        <span>Problem Solving</span>
+        <div class="progress"><div class="bar" data-progress="80"></div></div>
+      </div>
+      <div class="skill-card">
+        <span>Time Management</span>
+        <div class="progress"><div class="bar" data-progress="85"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-section>
+    <h2>Projects</h2>
+    <div class="filters" role="group" aria-label="Project filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="database">Database</button>
+      <button class="filter-btn" data-filter="pbl">PBL</button>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card" data-category="database">
+        <h3>Gym Membership Management System</h3>
+        <p>SQL database with CRUD operations, joins, and reporting for members, trainers, and payments.</p>
+        <button class="view-btn" data-confetti>View Project</button>
+        <div class="overlay" aria-hidden="true">
+          <p>Tech: MySQL, ERD, Stored Procedures</p>
+        </div>
+      </article>
+      <article class="project-card" data-category="web">
+        <h3>Personal Portfolio</h3>
+        <p>Responsive site showcasing projects, education, and skills.</p>
+        <button class="view-btn" data-confetti>View Project</button>
+        <div class="overlay" aria-hidden="true">
+          <p>Tech: HTML, CSS, JavaScript</p>
+        </div>
+      </article>
+      <article class="project-card" data-category="pbl">
+        <h3>Educational App Prototype</h3>
+        <p>Peer learning app concept with simple task tracking.</p>
+        <button class="view-btn" data-confetti>View Project</button>
+        <div class="overlay" aria-hidden="true">
+          <p>Focus: UX, Feedback loops</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-section>
+    <h2>Contact</h2>
+    <form id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+        <small class="error" aria-live="polite"></small>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <small class="error" aria-live="polite"></small>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <small class="error" aria-live="polite"></small>
+      </div>
+      <button type="submit" class="cta" data-confetti>Send</button>
+    </form>
+    <div id="thankYou" class="toast" role="status" aria-live="polite" hidden>
+      Thank you! Your message has been received.
+    </div>
+    <p>Email: <a href="mailto:08230145.sce@rub.edu.bt">08230145.sce@ub.edu.bt</a></p>
+  </section>
+
+  <!-- Floating Social Sidebar -->
+  <aside class="social-sidebar" aria-label="Social links">
+    <a href="#" class="social" title="GitHub" aria-label="GitHub">🐱</a>
+    <a href="#" class="social" title="LinkedIn" aria-label="LinkedIn">💼</a>
+    <a href="#" class="social" title="Email" aria-label="Email">✉️</a>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kuenga Yangchen. All Rights Reserved. <span id="clock"></span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
